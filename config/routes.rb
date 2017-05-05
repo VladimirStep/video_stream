@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
   controller :static_pages do
     get :record
+    post :upload
   end
 end

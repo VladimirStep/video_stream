@@ -3,7 +3,7 @@ function PostBlob(audioBlob, videoBlob, fileName) {
     formData.append('filename', fileName);
     formData.append('audio-blob', audioBlob);
     formData.append('video-blob', videoBlob);
-    xhr('save.php', formData, function(ffmpeg_output) {
+    xhr('upload', formData, function(ffmpeg_output) {
         document.querySelector('h1').innerHTML = ffmpeg_output.replace(/\\n/g, '<br />');
         preview.src = 'uploads/' + fileName + '-merged.webm';
         preview.play();

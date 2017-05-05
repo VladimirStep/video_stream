@@ -3,4 +3,8 @@ Rails.application.routes.draw do
   root 'static_pages#index'
 
   resources :static_pages, only: [:index]
+
+  controller :static_pages do
+    get :record
+  end
 end

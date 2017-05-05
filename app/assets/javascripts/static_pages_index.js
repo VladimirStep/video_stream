@@ -1,6 +1,8 @@
 function ready() {
     var canvas = document.getElementById('canvas');
-    var context = canvas.getContext('2d');
+    if (canvas !== null) {
+        var context = canvas.getContext('2d');
+    }
     var video = document.getElementById('video');
 
     if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {

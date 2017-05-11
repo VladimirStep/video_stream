@@ -32,5 +32,7 @@ doc/
 .idea
 .secret
 .env
+.ruby-gemset
+.ruby-version
 
 public/uploads/*

@@ -2,7 +2,7 @@ class StaticPagesController < ApplicationController
   def index
   end
 
-  def record
+  def sample
   end
 
   def upload

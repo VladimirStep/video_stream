@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :static_pages, only: [:index]
 
   controller :static_pages do
-    get :record
+    get :sample
     post :upload
   end
 end

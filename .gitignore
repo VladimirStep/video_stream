@@ -24,6 +24,7 @@
 
 # Ignore other files
 database.yml
+secrets.yml
 doc/
 *.swp
 *~

@@ -2,9 +2,9 @@ function PostBlob(videoBlob, fileName) {
     var formData = new FormData();
     formData.append('filename', fileName);
     formData.append('video_blob', videoBlob);
-    xhr('upload', formData, function(ffmpeg_output) {
-        document.querySelector('h1').innerHTML = ffmpeg_output.replace(/\\n/g, '<br />');
-        preview.src = 'uploads/' + fileName + '-merged.webm';
+    xhr('upload', formData, function(output) {
+        document.querySelector('h1').innerHTML = JSON.parse(output).message;
+        preview.src = 'uploads/' + fileName + '.webm';
         preview.play();
         preview.muted = false;
     });
@@ -47,7 +47,7 @@ stop.onclick = function() {
     record.disabled = false;
     stop.disabled = true;
     preview.src = '';
-    preview.poster = 'ajax-loader.gif';
+    preview.poster = '<%= asset_path('ajax-loader.gif') %>';
     fileName = Math.round(Math.random() * 99999999) + 99999999;
     recordVideo.stopRecording(function() {
         document.querySelector('h1').innerHTML = 'Uploading to server...';

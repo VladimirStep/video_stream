@@ -1,13 +1,19 @@
-<h1>RecordRTC / Rails / FFmpeg</h1>
-
-<section class="experiment">
-  <video id="preview" controls style="border: 1px solid rgb(15, 158, 238); height: 480px; max-width: 100%; vertical-align: top; width: 640px;"></video>
-
-  <button id="record">Record</button>
-  <button id="stop" disabled>Stop</button>
-
-  <div id="container" style="padding: 1em 2em;"></div>
-</section>
-
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <br>
+      <h1>RecordRTC / Rails / FFmpeg</h1>
+      <br>
+      <video id="preview" controls></video>
+    </div>
+  </div>
+  <br><br>
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <button id="record" class="btn btn-lg btn-success">Record</button>
+      <button id="stop" class="btn btn-lg btn-danger" disabled>Stop</button>
+    </div>
+  </div>
+</div>
 <%= javascript_include_tag 'RecordRTC' %>
 <%= javascript_include_tag 'static_pages_index' %>

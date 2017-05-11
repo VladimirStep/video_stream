@@ -12,7 +12,7 @@ function ready() {
     }
 
     document.getElementById("snap").addEventListener("click", function() {
-        context.drawImage(video, 0, 0, 640, 480);
+        context.drawImage(video, 0, 0, 320, 240);
     });
 }
 

@@ -12,9 +12,7 @@ function PostBlob(videoBlob, fileName) {
 var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 var record = document.getElementById('record');
 var stop = document.getElementById('stop');
-var recordVideo = document.getElementById('record-video');
 var preview = document.getElementById('preview');
-var container = document.getElementById('container');
 var recordVideo;
 record.onclick = function() {
     record.disabled = true;
